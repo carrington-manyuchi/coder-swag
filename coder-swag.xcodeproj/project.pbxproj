@@ -16,6 +16,7 @@
 		23B5B82C29CB6D1700F982E4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5B82B29CB6D1700F982E4 /* CategoryCell.swift */; };
 		23B5B82E29CB724900F982E4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5B82D29CB724900F982E4 /* Category.swift */; };
 		23B5B83229CB744000F982E4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5B83129CB744000F982E4 /* DataService.swift */; };
+		23B5B83429CB8AD200F982E4 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5B83329CB8AD200F982E4 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		23B5B82B29CB6D1700F982E4 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		23B5B82D29CB724900F982E4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		23B5B83129CB744000F982E4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		23B5B83329CB8AD200F982E4 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				23B5B81A29CB65C100F982E4 /* Main.storyboard */,
 				23B5B81F29CB65C200F982E4 /* LaunchScreen.storyboard */,
 				23B5B82B29CB6D1700F982E4 /* CategoryCell.swift */,
+				23B5B83329CB8AD200F982E4 /* ProductCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				23B5B81529CB65C100F982E4 /* AppDelegate.swift in Sources */,
 				23B5B83229CB744000F982E4 /* DataService.swift in Sources */,
 				23B5B81729CB65C100F982E4 /* SceneDelegate.swift in Sources */,
+				23B5B83429CB8AD200F982E4 /* ProductCell.swift in Sources */,
 				23B5B82C29CB6D1700F982E4 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
