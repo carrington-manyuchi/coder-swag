@@ -59,6 +59,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bGV-hX-uBd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xlD-fA-BKo"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WMi-MG-fRG"/>
@@ -72,20 +76,22 @@
                             <constraint firstItem="auB-at-xYE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Yul-IL-HnL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CODER SWAG" id="cQ6-xR-oI9"/>
+                    <navigationItem key="navigationItem" title="CODER SWAG" id="cQ6-xR-oI9">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="WRY-r8-J9b"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryTable" destination="HKr-xk-uLW" id="edy-1X-O2M"/>
-                        <segue destination="sy1-zS-ixA" kind="show" id="dLO-5r-CQf"/>
+                        <segue destination="sy1-zS-ixA" kind="show" identifier="ProductsVC" id="dLO-5r-CQf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="99.776785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!-- Products-->
         <scene sceneID="qTG-xA-IM7">
             <objects>
-                <viewController id="sy1-zS-ixA" sceneMemberID="viewController">
+                <viewController id="sy1-zS-ixA" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sNr-Qz-bWN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,25 +105,25 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AI7-cS-0ia">
                                 <rect key="frame" x="0.0" y="70" width="414" height="738"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f0X-NZ-m6j">
-                                    <size key="itemSize" width="180" height="287"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="f0X-NZ-m6j">
+                                    <size key="itemSize" width="150" height="287"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="8jn-o9-75N" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="287"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="287"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zlr-Jq-nlZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="287"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="287"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="U0j-rb-1rP">
-                                                    <rect key="frame" x="5" y="0.0" width="170" height="201.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="135" height="201.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devslopes Logo Graphic T-shirt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8g-p7-wZ9">
-                                                    <rect key="frame" x="5" y="210.5" width="170" height="48"/>
+                                                    <rect key="frame" x="5" y="210.5" width="140" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="NTe-M5-77d"/>
                                                     </constraints>
@@ -126,7 +132,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R1500" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbA-dA-p5J">
-                                                    <rect key="frame" x="5" y="261.5" width="170" height="20.5"/>
+                                                    <rect key="frame" x="5" y="261.5" width="140" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="OJg-Fw-n8c"/>
                                                     </constraints>
@@ -140,7 +146,7 @@
                                                 <constraint firstItem="qbA-dA-p5J" firstAttribute="top" secondItem="I8g-p7-wZ9" secondAttribute="bottom" constant="3" id="SuT-mF-9fh"/>
                                                 <constraint firstItem="qbA-dA-p5J" firstAttribute="leading" secondItem="Zlr-Jq-nlZ" secondAttribute="leading" constant="5" id="UXC-3a-IKa"/>
                                                 <constraint firstItem="I8g-p7-wZ9" firstAttribute="leading" secondItem="Zlr-Jq-nlZ" secondAttribute="leading" constant="5" id="UmZ-9w-qe4"/>
-                                                <constraint firstAttribute="trailing" secondItem="U0j-rb-1rP" secondAttribute="trailing" constant="5" id="Yvt-Kg-FGA"/>
+                                                <constraint firstAttribute="trailing" secondItem="U0j-rb-1rP" secondAttribute="trailing" constant="10" id="Yvt-Kg-FGA"/>
                                                 <constraint firstItem="I8g-p7-wZ9" firstAttribute="top" secondItem="U0j-rb-1rP" secondAttribute="bottom" constant="9" id="fve-Fm-e1E"/>
                                                 <constraint firstAttribute="bottom" secondItem="qbA-dA-p5J" secondAttribute="bottom" constant="5" id="hgG-yJ-jZz"/>
                                                 <constraint firstAttribute="trailing" secondItem="qbA-dA-p5J" secondAttribute="trailing" constant="5" id="jl5-7l-AYf"/>
@@ -149,7 +155,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="customSize" width="180" height="287"/>
+                                        <size key="customSize" width="150" height="287"/>
                                         <connections>
                                             <outlet property="imageView" destination="U0j-rb-1rP" id="Iws-kX-DD3"/>
                                             <outlet property="productPrice" destination="qbA-dA-p5J" id="8cg-qE-cvZ"/>
@@ -157,6 +163,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="sy1-zS-ixA" id="SOv-qR-Z1I"/>
+                                    <outlet property="delegate" destination="sy1-zS-ixA" id="scr-oT-vYx"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gvP-oA-GxR"/>
@@ -170,9 +180,12 @@
                             <constraint firstItem="AI7-cS-0ia" firstAttribute="top" secondItem="N2N-EU-9iJ" secondAttribute="bottom" constant="16" id="qA1-cf-fU4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="X7s-jg-Z9D">
+                    <navigationItem key="navigationItem" title=" Products" leftItemsSupplementBackButton="YES" id="X7s-jg-Z9D">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1ZM-Qr-2Gb"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="productsCollection" destination="AI7-cS-0ia" id="aLe-xg-EhN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iol-m2-UGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
